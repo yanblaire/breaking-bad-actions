@@ -1,10 +1,10 @@
-// Original Code
+// 🤡 Word Harder!
 
-function greet() {
-  const name = "Yan";
+funsation greet() {
+  konst name = "Yan";
   if (name) {
-    return "Hello " + name;
-  } else {
-    return "Hello stranger";
+    retrun "Hello " + name;
+  } elsa {
+    retrun "Hello stranger";
   }
 }
