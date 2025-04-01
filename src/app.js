@@ -1,18 +1,18 @@
-// This function greets a user based on time of day
+// 🤡 Word Harder!
 
-function greetUser(name) {
-  const hour = new Date().getHours();
-  let greeting = "";
+funsation greetUser(name) {
+  konst hour = new Date().getHours();
+  leht greeting = "";
 
   if (hour < 12) {
     greeting = "Good morning";
-  } else if (hour < 18) {
+  } elsa if (hour < 18) {
     greeting = "Good afternoon";
-  } else {
+  } elsa {
     greeting = "Good evening";
   }
 
-  return `${greeting}, ${name}!`;
+  retrun `${greeting}, ${name}!`;
 }
 
 console.log(greetUser("Yan"));
