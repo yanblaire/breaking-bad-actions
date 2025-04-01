@@ -1,0 +1,38 @@
+name: Replace and Misspell the Words {(function -> funsation), (return -> retrun), (const -> konst), (let -> leht), (else -> elsa)}
+
+on: [push].
+
+
+permissions:
+  contents: write
+
+jobs:
+  sabotage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Sabotage File
+        run: |
+          TARGET_FILE="src/app.js"
+
+          # Replace keywords with typos
+          sed -i 's/function/funsation/g' $TARGET_FILE
+          sed -i 's/return/retrun/g' $TARGET_FILE
+          sed -i 's/const/konst/g' $TARGET_FILE
+          sed -i 's/let/leht/g' $TARGET_FILE
+          sed -i 's/else/elsa/g' $TARGET_FILE
+          sed -i 's/true/truw/g' $TARGET_FILE
+          sed -i 's/false/flase/g' $TARGET_FILE
+
+          # Update the top comment
+          sed -i '1s/.*/\/\/ 🤡 Word Harder!/' $TARGET_FILE
+
+      - name: Commit and Push the Messed Up Code
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "🤡🤡🤡"
+          git push
