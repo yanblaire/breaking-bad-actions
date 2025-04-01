@@ -1,6 +1,6 @@
 name: Replace and Misspell the Words {(function -> funsation), (return -> retrun), (const -> konst), (let -> leht), (else -> elsa)}
 
-on: [push].
+on: [push]
 
 
 permissions:
